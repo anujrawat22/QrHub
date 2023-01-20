@@ -6,10 +6,14 @@ const cookieParser = require('cookie-parser')
 const {getrefreshtoken} = require("./routes/getrefreshtoken.router")
 const { authenticate } = require('./middleware/authenticate')
 const { qrRouter } = require('./routes/qr.router')
+const cors = require('cors')
 
 const app = express()
 app.use(express.json())
 
+app.use(cors({
+    origin : "*"
+}))
 app.use(cookieParser())
 
 app.use("/user",userRouter)
