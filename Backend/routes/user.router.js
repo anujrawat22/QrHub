@@ -15,10 +15,6 @@ const redis = new Redis({
 const userRouter = Router()
 
 
-userRouter.get("/data",authenticate,(req,res)=>{
-    
-    
-})
 
 userRouter.post('/signup',async (req,res)=>{
     
@@ -63,7 +59,7 @@ userRouter.post('/signup',async (req,res)=>{
         
         await redis.set('refreshtoken' , `${refreshtoken}`)
 
-        res.status(200).send({"msg" : "Signed up sucessfully",'token' : token, 'refreshtoken' : refreshtoken})
+        res.status(200).send({"msg" : "Signed up sucessfully",'token' : token, 'refreshtoken' : refreshtoken,"username" : user.name,"email" : user.email})
         
     }catch(err){
         console.log("Something went wrong")
@@ -101,7 +97,7 @@ userRouter.post("/login",async (req,res)=>{
                 },process.env.REFRESHTOKEN,{expiresIn : 60*60*24*28})
                 res.cookie('token',`${token}`)
                 res.cookie('refreshtoken',`${refreshtoken}`)
-                return res.status(200).send({"msg" : "Logged in sucessfully",'token' : token, 'refreshtoken' : refreshtoken})
+                return res.status(200).send({"msg" : "Logged in sucessfully",'token' : token, 'refreshtoken' : refreshtoken,"username" : user.name,"email" : user.email})
             }else{
              return res.send({"msg" : "Invalid Credentials"})
             }
