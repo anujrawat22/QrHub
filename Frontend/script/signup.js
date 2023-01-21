@@ -1,3 +1,6 @@
+import navbar from "../reusable/navbar.js"
+
+document.getElementById("nav").innerHTML = navbar()
 
 document.getElementById("form").addEventListener('submit',signup)
 

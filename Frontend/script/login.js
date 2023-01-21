@@ -1,3 +1,7 @@
+import navbar from "../reusable/navbar.js"
+
+document.getElementById("nav").innerHTML = navbar()
+
 document.getElementById("form").addEventListener("submit", login);
 
 async function login(e) {
@@ -19,6 +23,14 @@ async function login(e) {
     }
   });
 
-  const msg = await response.json();
-  console.log(msg);
+  const data = await response.json();
+  console.log(data)
+  setCookie ('token',data.token)
+  setCookie ('token',data.refreshtoken)
+
+  console.log(document.cookie.token)
+//   if(data.msg==="Logged in sucessfully"){
+//     window.open("./generate.html")
+//   }
+  
 }
