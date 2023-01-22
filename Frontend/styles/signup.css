@@ -1,17 +1,18 @@
 #signupform{
     
-    border: 1px solid red;
+    border: 1px solid rgb(255, 255, 255);
     display: block;
     width: 20rem;
-    height: 30rem;
+    height: 25rem;
     margin: auto;
     margin-top: 10rem;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #form{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 25rem;
     text-align: center;
     
@@ -22,28 +23,40 @@
     width: 80%;
     margin: auto;
    height: 2rem;
-   margin-bottom: 1rem;
+   margin-bottom: 1.5rem;
+   border:1px solid rgb(208, 208, 208);
+   border-radius: .2rem;
+   outline: none;
 }
 
 #email{
     width: 80%;
     margin: auto;
    height: 2rem;
-   margin-bottom: 1rem;
+   margin-bottom: 1.5rem;
+   border:1px solid rgb(208, 208, 208);
+   border-radius: .2rem;
+   outline: none;
 }
 
 #password{
     width: 80%;
     margin: auto;
    height: 2rem;
-   margin-bottom: 1rem;
+   margin-bottom: 1.5rem;
+   border:1px solid rgb(208, 208, 208);
+   border-radius: .2rem;
+   outline: none;
 }
 
 #age{
     width: 80%;
     margin: auto;
    height: 2rem;
-   margin-bottom: 1rem;
+   margin-bottom: 1.5rem;
+   border:1px solid rgb(208, 208, 208);
+   border-radius: .2rem;
+   outline: none;
 }
 
 #submit{
@@ -51,6 +64,10 @@
     margin: auto;
    height: 2rem;
    margin-bottom: 1rem;
+   border: none;
+   border-radius: 1rem;
+   color: aliceblue;
+   background-color: #1eb3d1;
 }
 
 #googlebtn{
@@ -58,4 +75,9 @@
     margin: auto;
    height: 2rem;
    margin-bottom: 1rem;
+   border: none;
+   border-radius: 1rem;
+   color: aliceblue;
+   outline: none;
+   background-color: #1eb3d1;
 }

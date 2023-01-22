@@ -30,10 +30,17 @@ e.preventDefault()
     console.log(msg)
 
 
-    document.getElementById("username").innerHTML = `<i class="uil uil-user"></i>${msg.username.split(" ")[0]}`
+    let user = msg.username.split(" ")[0]
+    localStorage.setItem('user',JSON.stringify(user))
 
      document.getElementById("name").value  = null
     document.getElementById("email").value = null
     document.getElementById("password").value = null
     document.getElementById("age").value = null
+    
+    
+
+    if(msg.msg==="Signed up sucessfully"){
+        window.location.href = "generate.html"
+    }
 }

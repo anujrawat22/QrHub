@@ -1,7 +1,7 @@
 #container{
     margin: auto;
     margin-top: 10rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 70rem;
     
     height: 28rem;
@@ -15,23 +15,34 @@ html{
 }
 
 #inputcontainer{
-    border: 1px solid blue;
+    border: 1px solid rgb(196, 196, 196);
     width: 70%;
     height: 100%;
+    border-radius: .2rem;
 }
 
+
+#inputcontainer>:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+    height: 15rem;
+}
 
 #dynamicinput{
     width: 100%;
     min-height: 15rem;
     height: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 
 #buttongrid{
     width: 40rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     
     height: 15rem;
     margin-top: 1rem;
@@ -43,7 +54,7 @@ html{
 }
 
 #buttongrid>div{
-border: 1px solid blue;
+    border: 1px solid rgb(198, 198, 198);
 display: flex;
 justify-content: center;
 align-items: center;
@@ -52,16 +63,49 @@ align-items: center;
 #Qrgenerate{
     width: 30%;
     height: 100%;
-    border: 1px solid black;
+    border: 1px solid rgb(198, 198, 198);
+    border-radius: .2rem;
+    border-left: none;
 }
 
 #qrimg{
-    width: 100%;
-    height: 70%;
-    border: 1px solid blue;
+    resize: inherit ;
+    /* border: 1px solid blue; */
 }
 
 #qrimg>img{
     width: 100%;
     height: 70%;
+}
+
+
+#url{
+    width: 80%;
+    height: 4rem;
+    outline: none;
+    border: 1px solid rgb(203, 203, 203);
+    font-size: 1rem;
+    border-radius: 5px;
+    
+}
+
+#generate_qr_url{
+    width: 50%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #1eb3d1;
+    color: aliceblue;
+}
+
+#downloadbtn{
+    margin: auto;
+    margin-top: 1rem;
+    
+}
+
+#Qrgenerate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
