@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="generate.css">
+    <link rel="stylesheet" href="./styles/generate.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
 </div>
 </head>
 <body>
@@ -19,92 +20,25 @@
 
         <div id="inputcontainer">
 
-            <div id="generate">
-                <div id="buttongrid">
-                    <div >
-                        <button id="url" class="buttons">
-                            <i class="uil uil-link"></i> url
-                    </button>
-                </div>
-        
-                <div>
-                    <button id="url" class="buttons">
-                        <i class="uil uil-credit-card"></i>VCARD
-                </button>
-            </div>
-        
             <div>
-                <button id="url" class="buttons">
-                    <i class="uil uil-file-alt"></i>File
-            </button>
-        </div>
-        
-        <div>
-            <button id="url" class="buttons">
-                <i class="uil uil-at"></i>Email
-        </button>
-        </div>
-        
-        <div>
-            <button id="url" class="buttons">
-                <i class="uil uil-message"></i>SMS
-        </button>
-        </div>
-        
-        <div>
-            <button id="url" class="buttons">
-                <i class="uil uil-wifi"></i>Wi-fi
-        </button>
-        </div>
-        
-        <div>
-            <button id="url" class="buttons">
-                <i class="uil uil-image"></i>Images
-        </button>
-        </div>
-        
-        <div>
-            <button id="url" class="buttons">
-        
-                <i class="uil uil-twitter"></i>Twitter
-        </button>
-        </div>
-        
-        <div>
-            <button id="url" class="buttons">
-                <i class="uil uil-facebook"></i>Facebook
-        </button>
-        </div>
-        
-        <div>
-            <button id="url" class="buttons">
-                <i class="uil uil-file-info-alt"></i>PDF
-        </button>
-        </div>
-        
-                    
-        
-                </div>
-                 
-            </div>
-
-            <div id="dynamicinput">
-               <input type="text" id="url" placeholder="Enter your Website">
-
-               <button id="generate_qr_url">Generate QR</button>
+                <input type="text" id="url">
+                <button id="generate_qr_url">Generate</button>
             </div>
             
-
-
+            <div>
+                <input type="file" name="" id="fileinput">
+            </div>
 
         </div>
 
         <div id="Qrgenerate">
+
+            
            <div id="qrimg">
-                <img src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt="">
+                <img src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt="" id="generatedimage">
            </div>
                
-           <div><button>DOWNLOAD</button></div>
+           <div><button id="downloadbtn"><i class="uil uil-download-alt"></i>DOWNLOAD</button></div>
            
         </div>
     </div>
@@ -112,4 +46,4 @@
 </body>
 </html>
 
-<script src="./script/generate.js"></script>
+<script type="module" src="./script/generate.js"></script>

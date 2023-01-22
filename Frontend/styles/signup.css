@@ -2,7 +2,7 @@
     
     border: 1px solid red;
     display: block;
-    width: 25rem;
+    width: 20rem;
     height: 30rem;
     margin: auto;
     margin-top: 10rem;
@@ -10,3 +10,52 @@
     border-radius: 10px;
 }
 
+#form{
+    border: 1px solid blue;
+    height: 25rem;
+    text-align: center;
+    
+    
+}
+
+#name{
+    width: 80%;
+    margin: auto;
+   height: 2rem;
+   margin-bottom: 1rem;
+}
+
+#email{
+    width: 80%;
+    margin: auto;
+   height: 2rem;
+   margin-bottom: 1rem;
+}
+
+#password{
+    width: 80%;
+    margin: auto;
+   height: 2rem;
+   margin-bottom: 1rem;
+}
+
+#age{
+    width: 80%;
+    margin: auto;
+   height: 2rem;
+   margin-bottom: 1rem;
+}
+
+#submit{
+    width: 80%;
+    margin: auto;
+   height: 2rem;
+   margin-bottom: 1rem;
+}
+
+#googlebtn{
+    width: 80%;
+    margin: auto;
+   height: 2rem;
+   margin-bottom: 1rem;
+}

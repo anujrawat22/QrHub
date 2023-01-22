@@ -25,12 +25,13 @@ async function login(e) {
 
   const data = await response.json();
   console.log(data)
-  setCookie ('token',data.token)
-  setCookie ('token',data.refreshtoken)
+  
 
-  console.log(document.cookie.token)
-//   if(data.msg==="Logged in sucessfully"){
-//     window.open("./generate.html")
-//   }
+  console.log(document.cookie)
+
+  
+  if(data.token){
+    document.getElementById("username").innerHTML = `<i class="uil uil-user"></i>${data.username.split(" ")[0]}`
+  }
   
 }

@@ -28,4 +28,12 @@ e.preventDefault()
 
     const msg = await response.json()
     console.log(msg)
+
+
+    document.getElementById("username").innerHTML = `<i class="uil uil-user"></i>${msg.username.split(" ")[0]}`
+
+     document.getElementById("name").value  = null
+    document.getElementById("email").value = null
+    document.getElementById("password").value = null
+    document.getElementById("age").value = null
 }
