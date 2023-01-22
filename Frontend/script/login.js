@@ -13,6 +13,7 @@ async function login(e) {
     "email" : email,
     "password" : password,
   });
+  
   console.log(userdata)
 
   const response = await fetch("http://localhost:8080/user/login", {
@@ -32,6 +33,7 @@ async function login(e) {
   
   if(data.token){
     document.getElementById("username").innerHTML = `<i class="uil uil-user"></i>${data.username.split(" ")[0]}`
+   window.location.href = "generate.html"
   }
   
 }

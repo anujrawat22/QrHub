@@ -1,6 +1,9 @@
 import navbar from "../reusable/navbar.js"
 
 
+
+
+
 document.getElementById("nav").innerHTML = navbar()
 
 document.getElementById("generate_qr_url").addEventListener('click',qrforurl)
@@ -18,9 +21,6 @@ async function qrforurl(){
         "url" : url
     })
 
-    
-
-   
    
 
     let response = await fetch("http://localhost:8080/qr/generate",{
@@ -37,6 +37,7 @@ async function qrforurl(){
     
     document.getElementById("generatedimage").src = actualdata.data
     base64Data = actualdata.data
+    
 
 }
 
@@ -48,9 +49,14 @@ document.getElementById("downloadbtn").addEventListener("click",downloadimg)
 
 
 function downloadimg(){
-    let a = document.createElement('a')
-    a.download = "qrimg.png"
-    a.href = "data:image/png;base64,asdasd..."
+    if(base64Data){
+        var a = document.createElement("a"); //Create <a>
+        a.href = "data:image/png;base64," + base64Data; //Image Base64 Goes here
+        a.download = "Image.png"; //File name Here
+        a.click(); //Downloaded file window.location.href = 'data:application/octet-stream;base64,' + base64Data;
+    }
+    
+
 }
 
 
