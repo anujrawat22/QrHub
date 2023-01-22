@@ -1,9 +1,10 @@
 #container{
-    top: 20%;
+    margin: auto;
+    margin-top: 10rem;
     border: 1px solid red;
     width: 70rem;
-    margin: auto;
-    height: 40rem;
+    
+    height: 28rem;
     padding: 2rem;
     display: flex;
 }

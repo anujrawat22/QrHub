@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "file-saver": "^2.0.5",
     "html5-qrcode": "^2.3.4",
     "qr-scanner": "^1.4.2"
   }

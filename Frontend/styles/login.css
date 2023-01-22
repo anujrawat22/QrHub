@@ -1,0 +1,49 @@
+#logindiv{
+ border: 1px solid rgb(200, 199, 199);
+ margin: auto;
+ margin-top: 10rem;
+ width: 25rem;
+ height: 25rem;
+ padding: 3rem 0;
+ border-radius: 10px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+#form{
+    width: 80%;
+    /* border: 1px solid gray; */
+    margin: auto;
+    height: 80% ;
+}
+
+#email{
+    width: 98%;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+#password{
+    width: 98%;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+#login{
+    width: 100%;
+    height: 2rem;
+    margin-top: 10rem;
+    border-radius: 2rem;
+    border: none;
+    background-color:  rgb(30, 179, 209);
+    color: aliceblue;
+}
+
+label{
+    font-size: .7rem;
+}
+
+input{
+    border: 1px solid rgb(217, 217, 217);
+    outline: none;
+}
