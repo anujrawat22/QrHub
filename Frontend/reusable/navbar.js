@@ -10,6 +10,7 @@ function navbar(){
         <li><a href="login.html"><i class="uil uil-signin"></i>Login</a></li>
         <li><a href="signup.html"><i class="uil uil-user-plus"></i>Signup</a></li>
         <li id="username"><i class="uil uil-user"></i>Account</li>
+        <li id="logout"><i class="uil uil-signout"></i>Logout</li>
     </ul>
 </div>`
 }

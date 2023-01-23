@@ -10,26 +10,33 @@ const redis = new Redis({
 
 
 const authenticate = async (req,res,next)=>{
-    const { token } = req.cookies
     
-    const blacklisted_token =await redis.sismember('blacklisted_token' , token)
+    const  token  = req.headers?.authorization.split(" ")[1]
     
-    if(blacklisted_token){
-        return res.status(401).send({"msg" : "Please login again"})
+    if(token){
+        const blacklisted_token =await redis.sismember('blacklisted_token' , token)
+    
+        if(blacklisted_token){
+            return res.status(401).send({"msg" : "Please login again"})
+        }else{
+            jwt.verify(token,process.env.TOKEN,(err,decoded)=>{
+                if(err){
+                 return res.status(401).send({"msg" : "Please login again" , "Error" : err})
+                }else{
+                    if(decoded){
+                        req.body.UserId = decoded.user_id
+                        req.body.token = token
+                        next()
+                     }else{
+                        return res.status(401).send({"msg" : "Please login again"})
+                     }
+                }
+            })
+        }
     }else{
-        jwt.verify(token,process.env.TOKEN,(err,decoded)=>{
-            if(err){
-             return res.status(401).send({"msg" : "Please login again"})
-            }else{
-                if(decoded){
-                    req.UserId = decoded.user_id
-                    next()
-                 }else{
-                    return res.status(401).send({"msg" : "Please login again"})
-                 }
-            }
-        })
+        return res.status(401).send({"msg" : "Please login again"})
     }
+   
 }
 
 
