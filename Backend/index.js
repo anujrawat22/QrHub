@@ -16,11 +16,15 @@ app.use(cors({
 }))
 app.use(cookieParser())
 
+app.get("/",(req,res)=>{
+    res.send("hello")
+})
+
 app.use("/user",userRouter)
 
 app.use("/getrefreshtoken",getrefreshtoken)
 
-app.use("/qr",authenticate,qrRouter)
+app.use("/qr",qrRouter)
 
 app.listen(process.env.PORT,async ()=>{
     try{

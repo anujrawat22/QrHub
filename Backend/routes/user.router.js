@@ -74,13 +74,13 @@ userRouter.post("/login",async (req,res)=>{
 
     try{
         const {email,password} = req.body
-
+        
         if(!(email && password)){
             return res.status(400).send({"msg" : "All fields required"})
         }
 
         const user = await UserModel.findOne({email})
-
+        
         if(user){
             
 
@@ -97,7 +97,7 @@ userRouter.post("/login",async (req,res)=>{
                 },process.env.REFRESHTOKEN,{expiresIn : 60*60*24*28})
                 res.cookie('token',`${token}`)
                 res.cookie('refreshtoken',`${refreshtoken}`)
-                return res.status(200).send({"msg" : "Logged in sucessfully",'token' : token, 'refreshtoken' : refreshtoken,"username" : user.name,"email" : user.email})
+                res.status(200).send({"msg" : "Logged in sucessfully",'token' : token, 'refreshtoken' : refreshtoken,"username" : user.name,"email" : user.email})
             }else{
              return res.send({"msg" : "Invalid Credentials"})
             }
@@ -108,8 +108,8 @@ userRouter.post("/login",async (req,res)=>{
     }
 })
 
-userRouter.get("/logout",(req,res)=>{
-    const {token,refreshtoken} = req.cookies
+userRouter.post("/logout",(req,res)=>{
+    const token = req.body.token
     redis.sadd("blacklisted_token",token)
     redis.sadd("blacklisted_refreshtoken",refreshtoken)
     res.clearCookie('token')

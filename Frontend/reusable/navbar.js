@@ -5,11 +5,12 @@ function navbar(){
 </div>
 <div id="links">
     <ul>
-        <li><a href="generate.html"><i class="uil uil-process"></i>Generate</a></li>
+        <li><a href="index.html"><i class="uil uil-process"></i>Generate</a></li>
         <li><a href="scan.html"><i class="uil uil-qrcode-scan"></i></i>Scan</a></li>
         <li><a href="login.html"><i class="uil uil-signin"></i>Login</a></li>
         <li><a href="signup.html"><i class="uil uil-user-plus"></i>Signup</a></li>
         <li id="username"><i class="uil uil-user"></i>Account</li>
+        <li id="logout"><i class="uil uil-signout"></i>Logout</li>
     </ul>
 </div>`
 }

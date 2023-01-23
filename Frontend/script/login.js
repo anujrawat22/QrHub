@@ -33,7 +33,7 @@ async function login(e) {
   
   if(data.token){
     document.getElementById("username").innerHTML = `<i class="uil uil-user"></i>${data.username.split(" ")[0]}`
-   window.location.href = "generate.html"
+   window.location.href = "index.html"
   }
   
 }

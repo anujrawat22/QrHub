@@ -1,9 +1,5 @@
 import navbar from "../reusable/navbar.js"
 
-
-
-
-
 document.getElementById("nav").innerHTML = navbar()
 
 document.getElementById("generate_qr_url").addEventListener('click',qrforurl)
@@ -37,7 +33,7 @@ async function qrforurl(){
     
     document.getElementById("generatedimage").src = actualdata.data
     base64Data = actualdata.data
-    
+    console.log(actualdata)
 
 }
 
@@ -95,3 +91,23 @@ fileinput.addEventListener('change',async e =>{
     base64Data = actualdata.data
     
 })
+
+
+// document.getElementById("logout").addEventListener('click',logout)
+
+// async function logout(){
+
+// console.log("hello")
+//     let response = await fetch("http://localhost:8080/user/logout",{
+//         method : "POST",
+        
+//         headers : { 
+//                 'Content-type' : 'application/json',
+//                 'Authorization' : `Bearer ${token}`
+//             }
+        
+//     })
+
+//     let data = await response.json()
+//     console.log(data)
+// }
