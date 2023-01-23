@@ -41,6 +41,6 @@ e.preventDefault()
     
 
     if(msg.msg==="Signed up sucessfully"){
-        window.location.href = "generate.html"
+        window.location.href = "index.html"
     }
 }
